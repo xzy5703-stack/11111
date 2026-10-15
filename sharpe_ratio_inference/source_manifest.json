@@ -1,0 +1,28 @@
+{
+  "repository": "zoonek/2025-sharpe-ratio",
+  "commit": "6199ecb1c84da7eee7bd81d9a017cf12b8ff0e0d",
+  "archive_url": "https://codeload.github.com/zoonek/2025-sharpe-ratio/zip/6199ecb1c84da7eee7bd81d9a017cf12b8ff0e0d",
+  "archive_sha256": "61806f5814970925caad1d49dd71dd25d974c85787c5445f00f66c061ead68d9",
+  "files": {
+    ".flake8": "e06c780ace83def17b947a8c8d3573eb8d9e6a751706b41b8a3c38549d2dd952",
+    ".gitignore": "e9927a180366709cdfa067a0181c345c480b3f75e0c9ae4566fc890f70a5d88f",
+    "Exhibit_11,12_Optimal_Number_of_Clusters.ipynb": "8d015fee4b521c475c4fa594acf5caf08e2c72abcbd2a656c78df4bc87af8a05",
+    "Exhibit_13_sd(max).ipynb": "60ab1e2288c636b8cc625f85cd183d9635487a744da8893ee5a4e83ae8c25648",
+    "Exhibit_1_Hedge_Fund_Returns.ipynb": "019ffd9790c0350bc2b8eda2b2b3fc1873f1bbd463456388645a10d0d5b62813",
+    "Exhibit_2_Variance_Plot.ipynb": "baac2d29a35282516f63d17df33b7df330c46bb0ecec2373fbd202e30120ce3b",
+    "Exhibit_3_PSR.ipynb": "de87721bfb683b48993c0e2d1711d31741238b30842e98873e437c60b4aa156c",
+    "Exhibit_4_Var_Max_X.ipynb": "be77ba065021c1ec3798ddf11cb252ac041671908b2e8f675327ff76d8d7224a",
+    "Exhibit_5_FWER.ipynb": "10ef418339101adb87f6b377cf7a59ff064b302f64bb9c976667db5fa02900d9",
+    "Exhibit_6_FDR.ipynb": "3c449789cd5e3b3d82dfd8b5788c284ce71e33ef51103a30d69b68afe1ea647c",
+    "Exhibit_7_SFDR.ipynb": "e0599514d925fde9cb4224ba5efa22413f525508f4457b27020688c8b49d1827",
+    "README.md": "1a1fb51a5cdaafaabc8c0fc9dc700cfdcf5764c6e8447eea7a6beb5a11f7b720",
+    "Unused/Exhibit_1,2_PSR.ipynb": "5d3d94afdacbc1e3cffc321c40e406453bd0af2b75b6e39c3318f6878f2b5965",
+    "Unused/Exhibit_11,12_FWER-FDR.ipynb": "41805a6e181546db2dc8e2348e468b8c418b773fb818fb65e5444696de3e9122",
+    "Unused/Exhibit_X__Annualization__E[Max].ipynb": "94d35c9b39e3496b6c7bc84680c5983c0c07219c0d852ef235c8376483e938c9",
+    "Unused/More_Plots.ipynb": "5f83c87479b7cc2a25cd13d343fc666d3cebbad7a82bc3e16be14e94ef8897d6",
+    "Unused/tmp_FDR.ipynb": "8771f11ce302bed763afbbfedabaeed088d28f05e3f35602ce29297382255fd1",
+    "Unused/tmp_FWER-FDR_with_Gaussian_Sharpe_Ratios.ipynb": "6e04b006a40652ec8b7d07664e3958158cbea4c3e99701c45a98d8c9e1e34377",
+    "functions.py": "c9cdee7c36d0cfd0658f8b2d92f5e43d5a024669dab0d3be8262c774b6f0b25b",
+    "requirements.txt": "3b7d57b6a759f01b9691de28aace95071ce34d7e98555fcc11bed348984ae43e"
+  }
+}

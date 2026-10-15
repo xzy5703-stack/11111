@@ -1,0 +1,19 @@
+{
+  "title": "How to Use the Sharpe Ratio",
+  "authors": [
+    "Marcos López de Prado",
+    "Alexander Lipton",
+    "Vincent Zoonekynd"
+  ],
+  "first_posted": "2025-10-04",
+  "latest_revision": "2026-03-25",
+  "paper_url": "https://ssrn.com/abstract=5520741",
+  "official_summary_url": "https://www.adialab.ae/research-series/how-to-use-the-sharpe-ratio",
+  "source_commit_date": "2026-02-05",
+  "scope": "Author numeric example and full Exhibit 2 Monte Carlo grid from pinned author repository",
+  "limitations": [
+    "Author code predates the March 2026 paper revision; latest PDF was not obtainable for figure-by-figure comparison.",
+    "The author generator uses a Gaussian copula and transformed mixture marginals. Closed-form variance is approximate under this generator.",
+    "Ray replaced by serial scheduling and explicit seed; generator/function body and full simulation grid unchanged."
+  ]
+}
