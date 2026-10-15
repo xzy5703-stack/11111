@@ -1,0 +1,176 @@
+{
+  "repository": "zoonek/2025-sharpe-ratio",
+  "commit": "6199ecb1c84da7eee7bd81d9a017cf12b8ff0e0d",
+  "paper_url": "https://ssrn.com/abstract=5520741",
+  "interpreter": "python",
+  "executed_at": "2026-10-15T12:22:52.101570+00:00",
+  "numeric_example": {
+    "author_tests_passed": [
+      "test_sharpe_ratio_variance",
+      "test_minimum_track_record_length",
+      "test_probabilistic_sharpe_ratio",
+      "test_sharpe_ratio_power",
+      "test_pFDR",
+      "test_oFDR",
+      "test_FDR_critical_value"
+    ],
+    "independent_formula_check_passed": true,
+    "rows": [
+      {
+        "rho": 0,
+        "observed_monthly_SR": 0.45569620253164556,
+        "generalized_standard_error": 0.3285885940427956,
+        "gaussian_iid_standard_error": 0.21445954499051034,
+        "minimum_track_record_months": 7.908995929745377,
+        "PSR": 0.987207261261433,
+        "p_value": 0.012792738738567011,
+        "power": 0.7575308318962203,
+        "planned_FDR": 0.5429763251947459,
+        "FDR_controlled_critical_SR": 0.4096403740443993,
+        "target_FDR": 0.25,
+        "achieved_FDR": 0.25,
+        "variance_formula_absolute_error": 4.163336342344337e-17
+      },
+      {
+        "rho": 0.2,
+        "observed_monthly_SR": 0.45569620253164556,
+        "generalized_standard_error": 0.37948999753333174,
+        "gaussian_iid_standard_error": 0.21445954499051034,
+        "minimum_track_record_months": 11.863493894618065,
+        "PSR": 0.9658320053889371,
+        "p_value": 0.0341679946110629,
+        "power": 0.6762921036696303,
+        "planned_FDR": 0.5709601652541348,
+        "FDR_controlled_critical_SR": 0.5270887962371908,
+        "target_FDR": 0.25,
+        "achieved_FDR": 0.25,
+        "variance_formula_absolute_error": 5.551115123125783e-17
+      }
+    ],
+    "scope": "Author functions.py numeric example, plus independent K=1 formula checks"
+  },
+  "status": "completed",
+  "exhibit2": {
+    "cases": 2000,
+    "paths_per_case": 10000,
+    "T": 60,
+    "seed": 20261015,
+    "sr_grid": [
+      0,
+      0.15,
+      0.3,
+      0.45,
+      0.6
+    ],
+    "rho_grid_points": 100,
+    "distributions": [
+      "gaussian",
+      "mild",
+      "moderate",
+      "severe"
+    ],
+    "author_function_body_unchanged": true,
+    "scheduling": "Serial instead of Ray, with explicit seed absent from original notebook",
+    "generator": "Author Gaussian copula AR(1) + interpolated empirical mixture marginals; rho denotes the generator parameter",
+    "runtime_seconds": 259.93582529099876,
+    "approximation_errors": [
+      {
+        "distribution": "gaussian",
+        "formula": "Gaussian iid",
+        "median_absolute_relative_error": 0.4252147822802318,
+        "max_absolute_relative_error": 0.691754042872279
+      },
+      {
+        "distribution": "gaussian",
+        "formula": "Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.06074272013024584,
+        "max_absolute_relative_error": 0.1226424774285041
+      },
+      {
+        "distribution": "gaussian",
+        "formula": "Non-Gaussian iid",
+        "median_absolute_relative_error": 0.4239335814912787,
+        "max_absolute_relative_error": 0.691754042872279
+      },
+      {
+        "distribution": "gaussian",
+        "formula": "Non-Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.060376792556360415,
+        "max_absolute_relative_error": 0.11685682700874667
+      },
+      {
+        "distribution": "mild",
+        "formula": "Gaussian iid",
+        "median_absolute_relative_error": 0.544084383976657,
+        "max_absolute_relative_error": 0.7762344575898886
+      },
+      {
+        "distribution": "mild",
+        "formula": "Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.24770373999563167,
+        "max_absolute_relative_error": 0.44132949273076083
+      },
+      {
+        "distribution": "mild",
+        "formula": "Non-Gaussian iid",
+        "median_absolute_relative_error": 0.3925795294587412,
+        "max_absolute_relative_error": 0.6897777509844376
+      },
+      {
+        "distribution": "mild",
+        "formula": "Non-Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.051943662146545666,
+        "max_absolute_relative_error": 0.09985366498887083
+      },
+      {
+        "distribution": "moderate",
+        "formula": "Gaussian iid",
+        "median_absolute_relative_error": 0.6336924612957873,
+        "max_absolute_relative_error": 0.8283596618283386
+      },
+      {
+        "distribution": "moderate",
+        "formula": "Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.37971815810649007,
+        "max_absolute_relative_error": 0.6395962869985361
+      },
+      {
+        "distribution": "moderate",
+        "formula": "Non-Gaussian iid",
+        "median_absolute_relative_error": 0.37181837521461747,
+        "max_absolute_relative_error": 0.6884414906564963
+      },
+      {
+        "distribution": "moderate",
+        "formula": "Non-Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.048451902195808305,
+        "max_absolute_relative_error": 0.1263747140787822
+      },
+      {
+        "distribution": "severe",
+        "formula": "Gaussian iid",
+        "median_absolute_relative_error": 0.6743902675243211,
+        "max_absolute_relative_error": 0.8497035497573219
+      },
+      {
+        "distribution": "severe",
+        "formula": "Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.45138137808652967,
+        "max_absolute_relative_error": 0.7233040780508091
+      },
+      {
+        "distribution": "severe",
+        "formula": "Non-Gaussian iid",
+        "median_absolute_relative_error": 0.32614083878480127,
+        "max_absolute_relative_error": 0.6888373875454057
+      },
+      {
+        "distribution": "severe",
+        "formula": "Non-Gaussian + autocorrelation",
+        "median_absolute_relative_error": 0.04632089918909088,
+        "max_absolute_relative_error": 0.16668454335181115
+      }
+    ],
+    "limitation": "This is the pinned February 2026 author-code experiment. The March 2026 revised paper PDF has not been checked figure by figure. Non-normal copula dependence does not exactly satisfy the closed-form AR(1) moment restrictions; approximation discrepancies are reported, not treated as exact-validation failures."
+  }
+}
