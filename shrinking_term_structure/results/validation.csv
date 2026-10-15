@@ -1,0 +1,7 @@
+date,test,max_absolute_difference,passed
+1986-06-30,exact LOOCV versus author estimator (Full KR),5.546778314435841e-16,True
+1986-06-30,exact LOOCV versus author estimator (KR-4),1.3491269733323374e-15,True
+1986-06-30,author inverse versus independent positive-definite solve,6.950169606501078e-15,True
+2013-12-31,exact LOOCV versus author estimator (Full KR),8.750290802269495e-16,True
+2013-12-31,exact LOOCV versus author estimator (KR-4),1.1079028319760376e-14,True
+2013-12-31,author inverse versus independent positive-definite solve,2.630491310884331e-14,True

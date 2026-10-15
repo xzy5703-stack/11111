@@ -1,0 +1,106 @@
+{
+  "status": "completed",
+  "title": "Shrinking the Term Structure",
+  "repository": "https://github.com/rosieiiiii/KR_return_example",
+  "commit": "7cbfa4635c8461995ff9bcea74fff2818fe4618f",
+  "paper_publication_date": "2026-08-21",
+  "scope": "Author's two-date, real-data core example; unchanged kernel/model functions, full 3650-day SVD, full KR and KR-1 to KR-10. Independent exact bond LOOCV is an added validation.",
+  "limitations": [
+    "Only the two dates bundled by the authors are reproduced, rather than the full daily 1961-2020 empirical sample.",
+    "Expanded history requires WRDS access to CRSP Treasury prices and cash flows. No WRDS credentials were requested or used.",
+    "Two cross sections cannot validate the four-factor time-series pricing results, recession complexity premium or full-paper tables.",
+    "Reported factor-count RMSE and uncentered R2 are in sample. Leave-one-bond-out RMSE is cross-sectional out of sample on the same day, not a future-return forecast.",
+    "The markdown in the author example mentions lambda=1; its actual executable cell and the 2026 paper use lambda=10, which is followed here."
+  ],
+  "parameters": {
+    "alpha": 0.05,
+    "delta": 0.0,
+    "lambda_unscaled": 10.0,
+    "maturity_grid_days": 3650,
+    "factor_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "dates": [
+    {
+      "date": "1986-06-30",
+      "next_business_day": "1986-07-01",
+      "bonds": 140,
+      "calendar_days": 1,
+      "compounded_risk_free_return": 0.00016713884826691228,
+      "full_kr_rmse_bp": 3.972751143465936,
+      "kr4_rmse_bp": 4.424891850100374,
+      "full_kr_r2_uncentered": 0.6539072598378852,
+      "kr4_r2_uncentered": 0.5706464207899693,
+      "it_vol_kr4": 0.42935357921003064,
+      "t_com_kr1_minus_kr4": 0.4492391360655043,
+      "loocv": {
+        "Full KR": {
+          "rmse_bp": 4.291712351037785,
+          "author_fit_max_abs_difference": 5.546778314435841e-16,
+          "checked_holdouts": 3
+        },
+        "KR-4": {
+          "rmse_bp": 4.675869385809318,
+          "author_fit_max_abs_difference": 1.3491269733323374e-15,
+          "checked_holdouts": 3
+        }
+      },
+      "independent_full_max_abs_difference": 6.950169606501078e-15
+    },
+    {
+      "date": "2013-12-31",
+      "next_business_day": "2014-01-02",
+      "bonds": 239,
+      "calendar_days": 2,
+      "compounded_risk_free_return": 3.114178983354421e-06,
+      "full_kr_rmse_bp": 1.8764437287152942,
+      "kr4_rmse_bp": 2.162857057096755,
+      "full_kr_r2_uncentered": 0.9746405390608555,
+      "kr4_r2_uncentered": 0.9663081729207307,
+      "it_vol_kr4": 0.03369182707926936,
+      "t_com_kr1_minus_kr4": 0.09011667404955258,
+      "loocv": {
+        "Full KR": {
+          "rmse_bp": 1.9645309837636773,
+          "author_fit_max_abs_difference": 8.750290802269495e-16,
+          "checked_holdouts": 4
+        },
+        "KR-4": {
+          "rmse_bp": 2.2199582197970313,
+          "author_fit_max_abs_difference": 1.1079028319760376e-14,
+          "checked_holdouts": 4
+        }
+      },
+      "independent_full_max_abs_difference": 2.630491310884331e-14
+    }
+  ],
+  "validation_passed": true,
+  "elapsed_seconds": 27.733381582998845,
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:30:20) [Clang 20.1.8 ]",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "sklearn": "1.9.0",
+    "matplotlib": "3.11.0"
+  },
+  "files": {
+    "metrics_csv": "results/model_metrics.csv",
+    "main_figure": "results/shrinking_term_structure_replication.png",
+    "observed_and_fitted": "results/bond_predictions.csv",
+    "curves": "results/return_curves.csv",
+    "validation": "results/validation.csv",
+    "factor_count_figure": "results/factor_count_rmse.png"
+  }
+}
