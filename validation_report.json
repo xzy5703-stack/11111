@@ -1,0 +1,779 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-15T12:30:20.439575+00:00",
+  "checks_passed": 70,
+  "checks_total": 70,
+  "checks": [
+    {
+      "project": "stripping_discount_curve",
+      "check": "original source SHA256 hashes",
+      "passed": true,
+      "details": {
+        "expected_files": 14,
+        "verified_files": 14,
+        "missing_source": [],
+        "hash_mismatches": [],
+        "remedy": null,
+        "commit": "0e13390c2b5a663545170fad5072b7b423d3793a"
+      }
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "two expected dated metric rows",
+      "passed": true
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "1961-06-30 finite per-bond output and row count",
+      "passed": true
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "1961-06-30 price and yield RMSE/MAE from bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 4.618527782440651e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "1961-06-30 per-bond price/yield errors",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 2.4195159764595076e-12,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "2013-12-31 finite per-bond output and row count",
+      "passed": true
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "2013-12-31 price and yield RMSE/MAE from bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 8.881784197001252e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "stripping_discount_curve",
+      "check": "2013-12-31 per-bond price/yield errors",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.938183112950355e-12,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "original source SHA256 hashes",
+      "passed": true,
+      "details": {
+        "expected_files": 24,
+        "verified_files": 24,
+        "missing_source": [],
+        "hash_mismatches": [],
+        "remedy": null,
+        "commit": "7cbfa4635c8461995ff9bcea74fff2818fe4618f"
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "22 dated Full KR / KR-1 through KR-10 rows",
+      "passed": true
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 Full KR RMSE/R2 from per-bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.8340884366807586e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 KR-4 RMSE/R2 from per-bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 2.327027459614328e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 Full KR RMSE/R2 from per-bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.281464485866309e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 KR-4 RMSE/R2 from per-bond CSV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.0613732115416497e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "kernel basis orthonormality",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.3306690738754696e-15,
+        "atol": 1e-10,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "saved basis satisfies independent published kernel eigen-equations",
+      "passed": true,
+      "details": {
+        "relative_residual": 1.4406107506641268e-15
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 observed returns from raw author data",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.1196562260554783e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted Full KR RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 2.944311461305915e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 Full KR independently derived analytic LOOCV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.446132268436486e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-1 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 5.3290705182007514e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-2 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 5.773159728050814e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-3 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 4.1744385725905886e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-4 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.592326932761353e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 KR-4 independently derived analytic LOOCV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 7.069900220812997e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-5 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.509903313490213e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-6 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.552713678800501e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-7 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.237055564881302e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-8 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 6.483702463810914e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-9 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.234568003383174e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "1986-06-30 independently fitted KR-10 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 6.483702463810914e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 observed returns from raw author data",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 3.161533534967731e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted Full KR RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.4657164371101317e-12,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 Full KR independently derived analytic LOOCV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.880984919163893e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-1 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.50350909079134e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-2 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.425526363618701e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-3 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.3278267374516872e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-4 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.354472090042691e-13,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 KR-4 independently derived analytic LOOCV",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.4450662888521038e-12,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-5 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.370282327836321e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-6 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 7.682743330406083e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-7 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 2.886579864025407e-15,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-8 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 2.4202861936828413e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-9 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 8.659739592076221e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "shrinking_term_structure",
+      "check": "2013-12-31 independently fitted KR-10 RMSE/R2",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.703349235223868e-14,
+        "atol": 1e-08,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "original source SHA256 hashes",
+      "passed": true,
+      "details": {
+        "expected_files": 20,
+        "verified_files": 20,
+        "missing_source": [],
+        "hash_mismatches": [],
+        "remedy": null,
+        "commit": "6199ecb1c84da7eee7bd81d9a017cf12b8ff0e0d"
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "numeric example has both rho cases and finite outputs",
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "rho=0.0 independent K=1 variance / PSR / p-value",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 5.551115123125783e-17,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "rho=0.2 independent K=1 variance / PSR / p-value",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.1102230246251565e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "complete unique 5 by 100 by 4 simulation grid",
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "all 2000 grid outputs finite and variance estimates positive",
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "grid Gaussian iid formula independently recomputed",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 6.938893903907228e-17,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "grid Gaussian AR(1) formula independently recomputed",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 8.673617379884035e-17,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "all 16 formula/distribution error-report rows",
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: gaussian / Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.609823385706477e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: gaussian / Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.298117831235686e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: gaussian / Non-Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 7.771561172376096e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: gaussian / Non-Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.9290125052862095e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: mild / Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.4432899320127035e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: mild / Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 4.996003610813204e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: mild / Non-Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.1102230246251565e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: mild / Non-Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.0824674490095276e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: moderate / Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 8.881784197001252e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: moderate / Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 7.771561172376096e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: moderate / Non-Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.2212453270876722e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: moderate / Non-Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 4.440892098500626e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: severe / Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 9.992007221626409e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: severe / Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 7.216449660063518e-16,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: severe / Non-Gaussian iid",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 1.2212453270876722e-15,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "check": "reported simulation discrepancy: severe / Non-Gaussian + autocorrelation",
+      "passed": true,
+      "details": {
+        "max_absolute_difference": 8.326672684688674e-17,
+        "atol": 1e-12,
+        "rtol": 1e-08
+      }
+    },
+    {
+      "project": "notebook",
+      "check": "every code cell executed without error",
+      "passed": true,
+      "details": {
+        "code_cells": 7,
+        "executed_cells": 7,
+        "errors": []
+      }
+    }
+  ],
+  "details": {
+    "sharpe_ratio_inference": {
+      "reported_discrepancies": [
+        {
+          "distribution": "gaussian",
+          "formula": "Gaussian iid",
+          "median_absolute_relative_error": 0.4252147822802334,
+          "max_absolute_relative_error": 0.6917540428722798
+        },
+        {
+          "distribution": "gaussian",
+          "formula": "Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.06074272013024673,
+          "max_absolute_relative_error": 0.12264247742850454
+        },
+        {
+          "distribution": "gaussian",
+          "formula": "Non-Gaussian iid",
+          "median_absolute_relative_error": 0.42393358149127863,
+          "max_absolute_relative_error": 0.6917540428722798
+        },
+        {
+          "distribution": "gaussian",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.06037679255635847,
+          "max_absolute_relative_error": 0.11685682700874667
+        },
+        {
+          "distribution": "mild",
+          "formula": "Gaussian iid",
+          "median_absolute_relative_error": 0.5440843839766585,
+          "max_absolute_relative_error": 0.7762344575898894
+        },
+        {
+          "distribution": "mild",
+          "formula": "Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.2477037399956321,
+          "max_absolute_relative_error": 0.44132949273076094
+        },
+        {
+          "distribution": "mild",
+          "formula": "Non-Gaussian iid",
+          "median_absolute_relative_error": 0.3925795294587423,
+          "max_absolute_relative_error": 0.6897777509844387
+        },
+        {
+          "distribution": "mild",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.051943662146545944,
+          "max_absolute_relative_error": 0.09985366498886972
+        },
+        {
+          "distribution": "moderate",
+          "formula": "Gaussian iid",
+          "median_absolute_relative_error": 0.6336924612957882,
+          "max_absolute_relative_error": 0.8283596618283393
+        },
+        {
+          "distribution": "moderate",
+          "formula": "Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.3797181581064903,
+          "max_absolute_relative_error": 0.6395962869985369
+        },
+        {
+          "distribution": "moderate",
+          "formula": "Non-Gaussian iid",
+          "median_absolute_relative_error": 0.37181837521461786,
+          "max_absolute_relative_error": 0.6884414906564975
+        },
+        {
+          "distribution": "moderate",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.048451902195808694,
+          "max_absolute_relative_error": 0.12637471407878265
+        },
+        {
+          "distribution": "severe",
+          "formula": "Gaussian iid",
+          "median_absolute_relative_error": 0.6743902675243221,
+          "max_absolute_relative_error": 0.8497035497573224
+        },
+        {
+          "distribution": "severe",
+          "formula": "Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.45138137808653034,
+          "max_absolute_relative_error": 0.7233040780508098
+        },
+        {
+          "distribution": "severe",
+          "formula": "Non-Gaussian iid",
+          "median_absolute_relative_error": 0.3261408387848019,
+          "max_absolute_relative_error": 0.6888373875454069
+        },
+        {
+          "distribution": "severe",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.04632089918909088,
+          "max_absolute_relative_error": 0.16668454335181115
+        }
+      ],
+      "interpretation": "The theoretical variance is approximate; finite-sample Monte Carlo and transformed copula dependence need not equal it. Discrepancies are measured, not forced to pass an equality assertion. PSR is a one-sided significance quantity, not a posterior probability."
+    }
+  },
+  "scope": "Source-integrity and independent numerical-output verification of the stated core experiments; not full-paper empirical replication or a trading-performance certification."
+}

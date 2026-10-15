@@ -1,0 +1,375 @@
+{
+  "executed_at": "2026-10-15T20:29:58+08:00",
+  "interpreter": "python",
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "scikit-learn": "1.9.0"
+  },
+  "projects": {
+    "sharpe_ratio_inference": {
+      "repository": "zoonek/2025-sharpe-ratio",
+      "commit": "6199ecb1c84da7eee7bd81d9a017cf12b8ff0e0d",
+      "paper_url": "https://ssrn.com/abstract=5520741",
+      "interpreter": "python",
+      "executed_at": "2026-10-15T12:22:52.101570+00:00",
+      "numeric_example": {
+        "author_tests_passed": [
+          "test_sharpe_ratio_variance",
+          "test_minimum_track_record_length",
+          "test_probabilistic_sharpe_ratio",
+          "test_sharpe_ratio_power",
+          "test_pFDR",
+          "test_oFDR",
+          "test_FDR_critical_value"
+        ],
+        "independent_formula_check_passed": true,
+        "rows": [
+          {
+            "rho": 0,
+            "observed_monthly_SR": 0.45569620253164556,
+            "generalized_standard_error": 0.3285885940427956,
+            "gaussian_iid_standard_error": 0.21445954499051034,
+            "minimum_track_record_months": 7.908995929745377,
+            "PSR": 0.987207261261433,
+            "p_value": 0.012792738738567011,
+            "power": 0.7575308318962203,
+            "planned_FDR": 0.5429763251947459,
+            "FDR_controlled_critical_SR": 0.4096403740443993,
+            "target_FDR": 0.25,
+            "achieved_FDR": 0.25,
+            "variance_formula_absolute_error": 4.163336342344337e-17
+          },
+          {
+            "rho": 0.2,
+            "observed_monthly_SR": 0.45569620253164556,
+            "generalized_standard_error": 0.37948999753333174,
+            "gaussian_iid_standard_error": 0.21445954499051034,
+            "minimum_track_record_months": 11.863493894618065,
+            "PSR": 0.9658320053889371,
+            "p_value": 0.0341679946110629,
+            "power": 0.6762921036696303,
+            "planned_FDR": 0.5709601652541348,
+            "FDR_controlled_critical_SR": 0.5270887962371908,
+            "target_FDR": 0.25,
+            "achieved_FDR": 0.25,
+            "variance_formula_absolute_error": 5.551115123125783e-17
+          }
+        ],
+        "scope": "Author functions.py numeric example, plus independent K=1 formula checks"
+      },
+      "status": "completed",
+      "exhibit2": {
+        "cases": 2000,
+        "paths_per_case": 10000,
+        "T": 60,
+        "seed": 20261015,
+        "sr_grid": [
+          0,
+          0.15,
+          0.3,
+          0.45,
+          0.6
+        ],
+        "rho_grid_points": 100,
+        "distributions": [
+          "gaussian",
+          "mild",
+          "moderate",
+          "severe"
+        ],
+        "author_function_body_unchanged": true,
+        "scheduling": "Serial instead of Ray, with explicit seed absent from original notebook",
+        "generator": "Author Gaussian copula AR(1) + interpolated empirical mixture marginals; rho denotes the generator parameter",
+        "runtime_seconds": 259.93582529099876,
+        "approximation_errors": [
+          {
+            "distribution": "gaussian",
+            "formula": "Gaussian iid",
+            "median_absolute_relative_error": 0.4252147822802318,
+            "max_absolute_relative_error": 0.691754042872279
+          },
+          {
+            "distribution": "gaussian",
+            "formula": "Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.06074272013024584,
+            "max_absolute_relative_error": 0.1226424774285041
+          },
+          {
+            "distribution": "gaussian",
+            "formula": "Non-Gaussian iid",
+            "median_absolute_relative_error": 0.4239335814912787,
+            "max_absolute_relative_error": 0.691754042872279
+          },
+          {
+            "distribution": "gaussian",
+            "formula": "Non-Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.060376792556360415,
+            "max_absolute_relative_error": 0.11685682700874667
+          },
+          {
+            "distribution": "mild",
+            "formula": "Gaussian iid",
+            "median_absolute_relative_error": 0.544084383976657,
+            "max_absolute_relative_error": 0.7762344575898886
+          },
+          {
+            "distribution": "mild",
+            "formula": "Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.24770373999563167,
+            "max_absolute_relative_error": 0.44132949273076083
+          },
+          {
+            "distribution": "mild",
+            "formula": "Non-Gaussian iid",
+            "median_absolute_relative_error": 0.3925795294587412,
+            "max_absolute_relative_error": 0.6897777509844376
+          },
+          {
+            "distribution": "mild",
+            "formula": "Non-Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.051943662146545666,
+            "max_absolute_relative_error": 0.09985366498887083
+          },
+          {
+            "distribution": "moderate",
+            "formula": "Gaussian iid",
+            "median_absolute_relative_error": 0.6336924612957873,
+            "max_absolute_relative_error": 0.8283596618283386
+          },
+          {
+            "distribution": "moderate",
+            "formula": "Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.37971815810649007,
+            "max_absolute_relative_error": 0.6395962869985361
+          },
+          {
+            "distribution": "moderate",
+            "formula": "Non-Gaussian iid",
+            "median_absolute_relative_error": 0.37181837521461747,
+            "max_absolute_relative_error": 0.6884414906564963
+          },
+          {
+            "distribution": "moderate",
+            "formula": "Non-Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.048451902195808305,
+            "max_absolute_relative_error": 0.1263747140787822
+          },
+          {
+            "distribution": "severe",
+            "formula": "Gaussian iid",
+            "median_absolute_relative_error": 0.6743902675243211,
+            "max_absolute_relative_error": 0.8497035497573219
+          },
+          {
+            "distribution": "severe",
+            "formula": "Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.45138137808652967,
+            "max_absolute_relative_error": 0.7233040780508091
+          },
+          {
+            "distribution": "severe",
+            "formula": "Non-Gaussian iid",
+            "median_absolute_relative_error": 0.32614083878480127,
+            "max_absolute_relative_error": 0.6888373875454057
+          },
+          {
+            "distribution": "severe",
+            "formula": "Non-Gaussian + autocorrelation",
+            "median_absolute_relative_error": 0.04632089918909088,
+            "max_absolute_relative_error": 0.16668454335181115
+          }
+        ],
+        "limitation": "This is the pinned February 2026 author-code experiment. The March 2026 revised paper PDF has not been checked figure by figure. Non-normal copula dependence does not exactly satisfy the closed-form AR(1) moment restrictions; approximation discrepancies are reported, not treated as exact-validation failures."
+      }
+    },
+    "stripping_discount_curve": {
+      "paper": "Stripping the Discount Curve — a Robust Machine Learning Approach",
+      "authors": [
+        "Damir Filipovic",
+        "Markus Pelger",
+        "Ye Ye"
+      ],
+      "repo": "https://github.com/yye9701/KR_example",
+      "commit": "0e13390c2b5a663545170fad5072b7b423d3793a",
+      "paper_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.01401",
+      "author_data_code_url": "https://mpelger.people.stanford.edu/data-and-code",
+      "paper_version_formula_checked": "Author March 10, 2023 draft hosted by Yale",
+      "paper_version_url": "https://economics.yale.edu/sites/default/files/2023-03/Pelger.pdf",
+      "first_draft": "2022-03-15",
+      "first_online_publication": "2025-12-22",
+      "journal_issue": "Management Science 72(9), September 2026, 8057-8120",
+      "scope": "Exact original KR_example.ipynb estimator/settings on two bundled real U.S. Treasury dates; supplementary ridge sensitivity and numerical validation.",
+      "limitation": "This is a two-date core-method replication, not the full historical empirical study, benchmark tables, or confidence intervals. Full raw Treasury panel requires WRDS/CRSP access. Journal-version figure numbering was not verified.",
+      "paper_mapping": "2023 draft Theorem 2, Eqs (10)-(11) closed-form KR, Eq (14) kernel, Eq (17) duration weights; two of three dates in Appendix Figure A.5(a) ridge sensitivity and Figure A.9 observed/fitted YTM. Figure panels and grids are partial, not complete reproductions.",
+      "settings": {
+        "alpha": 0.05,
+        "delta": 0.0,
+        "ridge": 1.0,
+        "max_maturity_days": 10950,
+        "dates": [
+          "1961-06-30",
+          "2013-12-31"
+        ],
+        "blas_threads": 2
+      },
+      "metrics": [
+        {
+          "date": "1961-06-30",
+          "securities": 50,
+          "max_maturity_years": 6.879452054794521,
+          "price_rmse": 0.1463618568056226,
+          "relative_price_rmse_bps": 14.93592868191662,
+          "yield_rmse_bps": 6.735665746254327,
+          "yield_mae_bps": 5.258573466472448,
+          "discount_positive_within_observed_maturities": true
+        },
+        {
+          "date": "2013-12-31",
+          "securities": 280,
+          "max_maturity_years": 29.389041095890413,
+          "price_rmse": 0.05660001752242736,
+          "relative_price_rmse_bps": 4.974403825317955,
+          "yield_rmse_bps": 1.6871675192294229,
+          "yield_mae_bps": 1.1958056606309948,
+          "discount_positive_within_observed_maturities": true
+        }
+      ],
+      "checks": {
+        "source_hashes_verified": true,
+        "1961-06-30_author_vs_brentq_ytm_max_abs": 2.324098305472866e-08,
+        "2013-12-31_author_vs_brentq_ytm_max_abs": 2.3841086008169476e-08,
+        "kernel_formula_max_abs_difference": 9.094947017729282e-13,
+        "kernel_sample_symmetry_max_abs_difference": 0.0,
+        "1961-06-30_inverse_vs_solve_curve_max_abs": 3.50941498084012e-13,
+        "1961-06-30_normal_equation_relative_residual": 2.6582355875985077e-14,
+        "2013-12-31_inverse_vs_solve_curve_max_abs": 8.425482533880313e-13,
+        "2013-12-31_normal_equation_relative_residual": 2.849471708593024e-14
+      },
+      "all_checks_passed": true,
+      "kernel_seconds": 2.1383476669980155,
+      "elapsed_seconds": 3.5702057919988874,
+      "environment": {
+        "python": "3.14.6",
+        "numpy": "2.4.6",
+        "scipy": "1.18.0",
+        "pandas": "3.0.3",
+        "matplotlib": "3.11.0"
+      },
+      "plots": [
+        "discount_yield_curves.png",
+        "observed_fitted_prices_yields.png",
+        "ridge_sensitivity.png"
+      ]
+    },
+    "shrinking_term_structure": {
+      "status": "completed",
+      "title": "Shrinking the Term Structure",
+      "repository": "https://github.com/rosieiiiii/KR_return_example",
+      "commit": "7cbfa4635c8461995ff9bcea74fff2818fe4618f",
+      "paper_publication_date": "2026-08-21",
+      "scope": "Author's two-date, real-data core example; unchanged kernel/model functions, full 3650-day SVD, full KR and KR-1 to KR-10. Independent exact bond LOOCV is an added validation.",
+      "limitations": [
+        "Only the two dates bundled by the authors are reproduced, rather than the full daily 1961-2020 empirical sample.",
+        "Expanded history requires WRDS access to CRSP Treasury prices and cash flows. No WRDS credentials were requested or used.",
+        "Two cross sections cannot validate the four-factor time-series pricing results, recession complexity premium or full-paper tables.",
+        "Reported factor-count RMSE and uncentered R2 are in sample. Leave-one-bond-out RMSE is cross-sectional out of sample on the same day, not a future-return forecast.",
+        "The markdown in the author example mentions lambda=1; its actual executable cell and the 2026 paper use lambda=10, which is followed here."
+      ],
+      "parameters": {
+        "alpha": 0.05,
+        "delta": 0.0,
+        "lambda_unscaled": 10.0,
+        "maturity_grid_days": 3650,
+        "factor_counts": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "dates": [
+        {
+          "date": "1986-06-30",
+          "next_business_day": "1986-07-01",
+          "bonds": 140,
+          "calendar_days": 1,
+          "compounded_risk_free_return": 0.00016713884826691228,
+          "full_kr_rmse_bp": 3.972751143465936,
+          "kr4_rmse_bp": 4.424891850100374,
+          "full_kr_r2_uncentered": 0.6539072598378852,
+          "kr4_r2_uncentered": 0.5706464207899693,
+          "it_vol_kr4": 0.42935357921003064,
+          "t_com_kr1_minus_kr4": 0.4492391360655043,
+          "loocv": {
+            "Full KR": {
+              "rmse_bp": 4.291712351037785,
+              "author_fit_max_abs_difference": 5.546778314435841e-16,
+              "checked_holdouts": 3
+            },
+            "KR-4": {
+              "rmse_bp": 4.675869385809318,
+              "author_fit_max_abs_difference": 1.3491269733323374e-15,
+              "checked_holdouts": 3
+            }
+          },
+          "independent_full_max_abs_difference": 6.950169606501078e-15
+        },
+        {
+          "date": "2013-12-31",
+          "next_business_day": "2014-01-02",
+          "bonds": 239,
+          "calendar_days": 2,
+          "compounded_risk_free_return": 3.114178983354421e-06,
+          "full_kr_rmse_bp": 1.8764437287152942,
+          "kr4_rmse_bp": 2.162857057096755,
+          "full_kr_r2_uncentered": 0.9746405390608555,
+          "kr4_r2_uncentered": 0.9663081729207307,
+          "it_vol_kr4": 0.03369182707926936,
+          "t_com_kr1_minus_kr4": 0.09011667404955258,
+          "loocv": {
+            "Full KR": {
+              "rmse_bp": 1.9645309837636773,
+              "author_fit_max_abs_difference": 8.750290802269495e-16,
+              "checked_holdouts": 4
+            },
+            "KR-4": {
+              "rmse_bp": 2.2199582197970313,
+              "author_fit_max_abs_difference": 1.1079028319760376e-14,
+              "checked_holdouts": 4
+            }
+          },
+          "independent_full_max_abs_difference": 2.630491310884331e-14
+        }
+      ],
+      "validation_passed": true,
+      "elapsed_seconds": 27.733381582998845,
+      "environment": {
+        "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:30:20) [Clang 20.1.8 ]",
+        "platform": "macOS-27.2-arm64-arm-64bit-Mach-O",
+        "numpy": "2.4.6",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "sklearn": "1.9.0",
+        "matplotlib": "3.11.0"
+      },
+      "files": {
+        "metrics_csv": "results/model_metrics.csv",
+        "main_figure": "results/shrinking_term_structure_replication.png",
+        "observed_and_fitted": "results/bond_predictions.csv",
+        "curves": "results/return_curves.csv",
+        "validation": "results/validation.csv",
+        "factor_count_figure": "results/factor_count_rmse.png"
+      }
+    }
+  },
+  "scope": "Three author-code core experiments; not full-paper reproduction of every empirical table."
+}

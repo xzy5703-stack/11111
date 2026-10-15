@@ -1,0 +1,39 @@
+# Downloaded third-party author code and real input datasets stay local.
+stripping_discount_curve/original/
+shrinking_term_structure/source/
+sharpe_ratio_inference/source/
+*/source_archive.zip
+*/vendor/
+**/__pycache__/
+**/*.py[cod]
+**/.DS_Store
+**/.mplconfig/
+**/runtime_cache/
+.venv/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+# Generated outputs can contain bond-level prices/returns; publish only aggregates
+# and our newly rendered figures. Never add author reference images or raw data.
+**/original*/
+*/results/*
+!*/results/summary.json
+!*/results/metrics.csv
+!*/results/model_metrics.csv
+!*/results/validation.csv
+!*/results/numeric_example.csv
+!*/results/exhibit2_full_grid.csv
+!*/results/exhibit2_approximation_errors.csv
+!stripping_discount_curve/results/discount_yield_curves.png
+!stripping_discount_curve/results/observed_fitted_prices_yields.png
+!stripping_discount_curve/results/ridge_sensitivity.png
+!shrinking_term_structure/results/shrinking_term_structure_replication.png
+!shrinking_term_structure/results/factor_count_rmse.png
+!sharpe_ratio_inference/results/exhibit2_gaussian.png
+!sharpe_ratio_inference/results/exhibit2_mild.png
+!sharpe_ratio_inference/results/exhibit2_moderate.png
+!sharpe_ratio_inference/results/exhibit2_severe.png

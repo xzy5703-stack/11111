@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "validation_environment": "Python 3.14.6 venv sharing locked Anaconda numerical libraries; Deprecated and wrapt installed locally in the venv. This is not a separately built full dependency stack.",
+  "notebook_cells_executed": 7,
+  "notebook_errors": 0,
+  "checks_passed": 70,
+  "checks_total": 70,
+  "comparisons": [
+    {
+      "project": "sharpe_ratio_inference",
+      "file": "numeric_example.csv",
+      "rows": 2,
+      "maximum_absolute_difference": 0.0,
+      "exact_dataframe_match": true,
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "file": "exhibit2_full_grid.csv",
+      "rows": 2000,
+      "maximum_absolute_difference": 0.0,
+      "exact_dataframe_match": true,
+      "passed": true
+    },
+    {
+      "project": "sharpe_ratio_inference",
+      "file": "exhibit2_approximation_errors.csv",
+      "rows": 16,
+      "maximum_absolute_difference": 0.0,
+      "exact_dataframe_match": true,
+      "passed": true
+    },
+    {
+      "project": "stripping_discount_curve",
+      "file": "metrics.csv",
+      "rows": 2,
+      "maximum_absolute_difference": 0.0,
+      "exact_dataframe_match": true,
+      "passed": true
+    },
+    {
+      "project": "shrinking_term_structure",
+      "file": "model_metrics.csv",
+      "rows": 22,
+      "maximum_absolute_difference": 0.0,
+      "exact_dataframe_match": true,
+      "passed": true
+    }
+  ],
+  "source_download_test": "Fresh-directory archive extraction and verification passed independently; 57 original files and 3 ZIP hashes verified.",
+  "github_actions": "Manual workflow included; cloud workflow has not been run."
+}

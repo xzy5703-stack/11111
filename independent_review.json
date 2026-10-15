@@ -1,0 +1,165 @@
+{
+  "reviewer": "independent subagent three_paper_review",
+  "review_status": "All three stated core experiments and final public snapshot independently reviewed. Publish-ready; no substantive blocker.",
+  "source_integrity": {
+    "stripping_discount_curve": "All 13 local source files match the retained commit archive byte-for-byte; archive SHA256 matches manifest.",
+    "shrinking_term_structure": "All 24 local source files match the retained commit archive byte-for-byte; archive SHA256 matches manifest.",
+    "sharpe_ratio_inference": "All 20 local source files match the retained commit archive byte-for-byte; archive SHA256 matches manifest."
+  },
+  "independent_output_checks": {
+    "stripping_discount_curve": {
+      "method": "Recomputed price and yield RMSE from per-bond result CSVs; compared with summary metrics.",
+      "yield_rmse_bp": {
+        "1961-06-30": 6.735665746254281,
+        "2013-12-31": 1.6871675192294355
+      },
+      "passed": true
+    },
+    "shrinking_term_structure": {
+      "method": "Recomputed RMSE and uncentered R2 from bond prediction CSVs. Independently solved the four-coefficient primal ridge problem with augmented least squares and compared its predictions with authors' dual-space estimator.",
+      "primal_vs_author_dual_max_absolute_difference": {
+        "1986-06-30": 2.8319360745321376e-15,
+        "2013-12-31": 1.0451708942760263e-14
+      },
+      "passed": true
+    },
+    "sharpe_ratio_inference": {
+      "method": "Reviewed original f3 source AST, runner extraction, numeric-example constants and independent K=1 formula. Original simulation body and 5x100x4, T=60, 10000-path grid retained; Ray decorator removed and explicit seed added.",
+      "passed_source_scope_review": true,
+      "full_grid_output_review_pending": false,
+      "full_grid_output_review_passed": true,
+      "cases": 2000,
+      "error_aggregation_recomputed": true,
+      "generalized_variance_approximation_errors": [
+        {
+          "distribution": "gaussian",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.0603767925563604,
+          "max_absolute_relative_error": 0.1168568270087466
+        },
+        {
+          "distribution": "mild",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.0519436621465456,
+          "max_absolute_relative_error": 0.0998536649888708
+        },
+        {
+          "distribution": "moderate",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.0484519021958083,
+          "max_absolute_relative_error": 0.1263747140787822
+        },
+        {
+          "distribution": "severe",
+          "formula": "Non-Gaussian + autocorrelation",
+          "median_absolute_relative_error": 0.0463208991890908,
+          "max_absolute_relative_error": 0.1666845433518111
+        }
+      ],
+      "additional_independent_iid_gaussian_finite_sample_reference": {
+        "method": "For genuinely iid Normal returns and author ddof=0 standard deviation, the finite-sample SR estimator equals noncentral-t(59,sqrt(60)*SR)/sqrt(59). Compared as a reference benchmark because the author gaussian generator uses an empirical marginal transform.",
+        "maximum_absolute_relative_simulation_discrepancy": 0.017069450307478196,
+        "asymptotic_formula_vs_exact_gaussian_reference_range": [
+          0.05000000000000393,
+          0.05690176290273696
+        ]
+      }
+    }
+  },
+  "reporting_boundaries": [
+    "Stripping and Shrinking are 2026 publications with 2022 initial working-paper drafts. Do not present them as first written in 2026.",
+    "Stripping reproduces the two-date author example and supplementary sensitivity, not all historical benchmark tables or confidence intervals. Formula mapping uses the March 2023 author draft.",
+    "Shrinking reproduces the two-date core example. Cross-sectional leave-one-bond-out errors do not measure future-return forecasting or verify full-sample time-series risk premia.",
+    "Sharpe simulation reproduces the complete f3 main simulation grid of Exhibit 2, not the earlier T=24 severe-only block or all standard-deviation plots in the original notebook.",
+    "Sharpe generator applies Gaussian AR(1) copula ranks to empirical mixture marginals. Its rho is a generator parameter; transformed returns do not obey exactly the AR(1) innovation moment restrictions of the approximate closed form.",
+    "Sharpe source commit is February 2026; SSRN indicates latest revised paper March 25, 2026. Figure-by-figure equivalence to that paper was not verified.",
+    "PSR equals 1 minus a one-sided p-value in this author implementation. It is not a posterior probability that a strategy is effective. FDR quantities depend on specified priors and model power.",
+    "2013 KR-4 uncentered in-sample R2 is approximately 0.9663, whereas 1986 is approximately 0.5706; report each date separately."
+  ],
+  "primary_sources": [
+    "https://mpelger.people.stanford.edu/research",
+    "https://mpelger.people.stanford.edu/data-and-code",
+    "https://academic.oup.com/rof/advance-article/doi/10.1093/rof/rfag033/8767770",
+    "https://economics.yale.edu/sites/default/files/2023-03/Pelger.pdf",
+    "https://www.adialab.ae/research-series/how-to-use-the-sharpe-ratio",
+    "https://papers.ssrn.com/sol3/Delivery.cfm/5520741.pdf?abstractid=5520741&mirid=1"
+  ],
+  "publication_package_initial_review": {
+    "setup_script": "Pinned archives and per-file hashes; safe path/symlink handling; staged extraction; relative paths to __file__. No portability blocker found.",
+    "gitignore": "Downloaded author source, original input, vendor and cache paths excluded. Only explicitly whitelisted aggregate results and newly rendered figures included. Actual upload manifest must still be checked.",
+    "README": "Paper dates and version distinctions, core-experiment scope, cross-sectional errors and approximate Sharpe formula are accurately explained.",
+    "sensitive_data_scan": "No matches in current own Python/docs/JSON files for personal home paths, Jupyter port/token strings, user ID or WeChat paths. Final Notebook and result files not yet available in package at scan time."
+  },
+  "publication_package_final_review": {
+    "candidate_file_count": 38,
+    "candidate_paths": [
+      ".github/workflows/validation.yml",
+      ".gitignore",
+      "LICENSE",
+      "README.md",
+      "replication_summary.json",
+      "requirements.txt",
+      "run_notebook.py",
+      "setup_sources.py",
+      "sharpe_ratio_inference/paper_metadata.json",
+      "sharpe_ratio_inference/replication_runner.py",
+      "sharpe_ratio_inference/results/exhibit2_approximation_errors.csv",
+      "sharpe_ratio_inference/results/exhibit2_full_grid.csv",
+      "sharpe_ratio_inference/results/exhibit2_gaussian.png",
+      "sharpe_ratio_inference/results/exhibit2_mild.png",
+      "sharpe_ratio_inference/results/exhibit2_moderate.png",
+      "sharpe_ratio_inference/results/exhibit2_severe.png",
+      "sharpe_ratio_inference/results/numeric_example.csv",
+      "sharpe_ratio_inference/results/summary.json",
+      "sharpe_ratio_inference/source_manifest.json",
+      "shrinking_term_structure/paper_metadata.json",
+      "shrinking_term_structure/replication_runner.py",
+      "shrinking_term_structure/results/factor_count_rmse.png",
+      "shrinking_term_structure/results/model_metrics.csv",
+      "shrinking_term_structure/results/shrinking_term_structure_replication.png",
+      "shrinking_term_structure/results/summary.json",
+      "shrinking_term_structure/results/validation.csv",
+      "shrinking_term_structure/source_manifest.json",
+      "stripping_discount_curve/paper_metadata.json",
+      "stripping_discount_curve/replication_runner.py",
+      "stripping_discount_curve/results/discount_yield_curves.png",
+      "stripping_discount_curve/results/metrics.csv",
+      "stripping_discount_curve/results/observed_fitted_prices_yields.png",
+      "stripping_discount_curve/results/ridge_sensitivity.png",
+      "stripping_discount_curve/results/summary.json",
+      "stripping_discount_curve/source_manifest.json",
+      "three_finance_papers.ipynb",
+      "validate_replication.py",
+      "validation_report.json"
+    ],
+    "private_path_and_token_scan_passed": true,
+    "source_data_vendor_archive_and_original_image_exclusions_passed": true,
+    "all_notebook_code_cells_executed_without_error": true,
+    "standard_validation_checks_passed": "70/70",
+    "fresh_sharpe_rerun_exact_match_to_original": true,
+    "clean_temporary_source_setup_passed": true,
+    "actual_api_upload_manifest_still_requested": true,
+    "judgment": "Publish-ready if the actual API payload exactly matches these independently checked non-ignored files."
+  },
+  "publication_snapshot_final_review": {
+    "target_repository": "xzy5703-stack/11111",
+    "visibility": "public",
+    "manifest_members": 40,
+    "snapshot_total_files": 41,
+    "all_manifest_bytes_and_sha256_verified": true,
+    "no_third_party_source_raw_data_original_reference_figures_vendor_archives_or_logs": true,
+    "readable_text_private_path_jupyter_token_and_username_scan_passed": true,
+    "notebook_execution_counts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "notebook_errors": 0,
+    "independent_standard_validation": "70/70",
+    "judgment": "publish-ready; no substantive blocker"
+  }
+}
