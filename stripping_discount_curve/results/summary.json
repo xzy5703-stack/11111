@@ -1,0 +1,79 @@
+{
+  "paper": "Stripping the Discount Curve \u2014 a Robust Machine Learning Approach",
+  "authors": [
+    "Damir Filipovic",
+    "Markus Pelger",
+    "Ye Ye"
+  ],
+  "repo": "https://github.com/yye9701/KR_example",
+  "commit": "0e13390c2b5a663545170fad5072b7b423d3793a",
+  "paper_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.01401",
+  "author_data_code_url": "https://mpelger.people.stanford.edu/data-and-code",
+  "paper_version_formula_checked": "Author March 10, 2023 draft hosted by Yale",
+  "paper_version_url": "https://economics.yale.edu/sites/default/files/2023-03/Pelger.pdf",
+  "first_draft": "2022-03-15",
+  "first_online_publication": "2025-12-22",
+  "journal_issue": "Management Science 72(9), September 2026, 8057-8120",
+  "scope": "Exact original KR_example.ipynb estimator/settings on two bundled real U.S. Treasury dates; supplementary ridge sensitivity and numerical validation.",
+  "limitation": "This is a two-date core-method replication, not the full historical empirical study, benchmark tables, or confidence intervals. Full raw Treasury panel requires WRDS/CRSP access. Journal-version figure numbering was not verified.",
+  "paper_mapping": "2023 draft Theorem 2, Eqs (10)-(11) closed-form KR, Eq (14) kernel, Eq (17) duration weights; two of three dates in Appendix Figure A.5(a) ridge sensitivity and Figure A.9 observed/fitted YTM. Figure panels and grids are partial, not complete reproductions.",
+  "settings": {
+    "alpha": 0.05,
+    "delta": 0.0,
+    "ridge": 1.0,
+    "max_maturity_days": 10950,
+    "dates": [
+      "1961-06-30",
+      "2013-12-31"
+    ],
+    "blas_threads": 2
+  },
+  "metrics": [
+    {
+      "date": "1961-06-30",
+      "securities": 50,
+      "max_maturity_years": 6.879452054794521,
+      "price_rmse": 0.1463618568056226,
+      "relative_price_rmse_bps": 14.93592868191662,
+      "yield_rmse_bps": 6.735665746254327,
+      "yield_mae_bps": 5.258573466472448,
+      "discount_positive_within_observed_maturities": true
+    },
+    {
+      "date": "2013-12-31",
+      "securities": 280,
+      "max_maturity_years": 29.389041095890413,
+      "price_rmse": 0.05660001752242736,
+      "relative_price_rmse_bps": 4.974403825317955,
+      "yield_rmse_bps": 1.6871675192294229,
+      "yield_mae_bps": 1.1958056606309948,
+      "discount_positive_within_observed_maturities": true
+    }
+  ],
+  "checks": {
+    "source_hashes_verified": true,
+    "1961-06-30_author_vs_brentq_ytm_max_abs": 2.324098305472866e-08,
+    "2013-12-31_author_vs_brentq_ytm_max_abs": 2.3841086008169476e-08,
+    "kernel_formula_max_abs_difference": 9.094947017729282e-13,
+    "kernel_sample_symmetry_max_abs_difference": 0.0,
+    "1961-06-30_inverse_vs_solve_curve_max_abs": 3.50941498084012e-13,
+    "1961-06-30_normal_equation_relative_residual": 2.6582355875985077e-14,
+    "2013-12-31_inverse_vs_solve_curve_max_abs": 8.425482533880313e-13,
+    "2013-12-31_normal_equation_relative_residual": 2.849471708593024e-14
+  },
+  "all_checks_passed": true,
+  "kernel_seconds": 2.1383476669980155,
+  "elapsed_seconds": 3.5702057919988874,
+  "environment": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "scipy": "1.18.0",
+    "pandas": "3.0.3",
+    "matplotlib": "3.11.0"
+  },
+  "plots": [
+    "discount_yield_curves.png",
+    "observed_fitted_prices_yields.png",
+    "ridge_sensitivity.png"
+  ]
+}
