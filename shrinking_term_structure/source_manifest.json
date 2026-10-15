@@ -1,0 +1,128 @@
+{
+  "repository": "https://github.com/rosieiiiii/KR_return_example",
+  "commit": "7cbfa4635c8461995ff9bcea74fff2818fe4618f",
+  "download_url": "https://codeload.github.com/rosieiiiii/KR_return_example/zip/7cbfa4635c8461995ff9bcea74fff2818fe4618f",
+  "archive_sha256": "1c5f3fa42da04c74e1b5e8d9453c3d662f0b57138c134e0148cce7a7b03c8987",
+  "files": [
+    {
+      "path": "KR_ret_models/read_ret_curve.ipynb",
+      "bytes": 116221,
+      "sha256": "998f55e3bc494b2d3cc2112e42d27a4f7a80aaaa23a8dbc1254a68e050017af6"
+    },
+    {
+      "path": "KR_return_example.ipynb",
+      "bytes": 151991,
+      "sha256": "d7b4224476cae65cd24f7dcfb60e077a1dfd06dae596507230f82cbd51541512"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6649,
+      "sha256": "33e48b2e70eed27584aa072531390c714425f5a794202017c84aad450e3da5d0"
+    },
+    {
+      "path": "complexity_measure.ipynb",
+      "bytes": 129963,
+      "sha256": "267143e0d062b7916ec55e4a2af56ac2dc768ed4c2e7c7edbd51389d120e386c"
+    },
+    {
+      "path": "construct_input_price_and_cashflow.ipynb",
+      "bytes": 24012,
+      "sha256": "423d5c2b74740d673fd216a5f8d93fd5a09b0908e78ab8167a0cc5296c4f1793"
+    },
+    {
+      "path": "data_supplement/2013_excess_return.png",
+      "bytes": 52196,
+      "sha256": "e20199f42b5cb0a973164ccc1c0b141df56d5b7eedf5619def987ff242881411"
+    },
+    {
+      "path": "data_supplement/IT_VOL.png",
+      "bytes": 41077,
+      "sha256": "fc8d7b9979cc8f80d2e6b802103f82125a6b153751b8023043aec075786cb072"
+    },
+    {
+      "path": "data_supplement/T-COM.png",
+      "bytes": 48928,
+      "sha256": "5efeea21462caa1c41be044a83df5ce21264a5fd90c3d89fcfdf58a447a843de"
+    },
+    {
+      "path": "data_supplement/compile_daily_riskfree.ipynb",
+      "bytes": 1569,
+      "sha256": "b05b362825a48d3da93daf4b47986e10d33b4ae28d7ae6423e94f05538c1e706"
+    },
+    {
+      "path": "data_supplement/cum_return_factors.png",
+      "bytes": 33815,
+      "sha256": "c20356fcbb498ab6df73d15910db69867f2deb47f5b2d9bc85da931263857ad8"
+    },
+    {
+      "path": "data_supplement/cum_rx_factors.png",
+      "bytes": 28054,
+      "sha256": "22ba3aabfd57f072750eb4bcd8dbf73b8176e841aa2935bcb26ed7a154fb306b"
+    },
+    {
+      "path": "example_data/dict_data.pkl",
+      "bytes": 11365405,
+      "sha256": "682e403cfd6c6a27849c8404d4e4f47942bf469381822a638aa92be6756b4108"
+    },
+    {
+      "path": "get_and_select_raw_data.ipynb",
+      "bytes": 30942,
+      "sha256": "b3b7131478ffd9a8c9788552cd1f09a3600751af66273b995e26b64ccf5de9dd"
+    },
+    {
+      "path": "mask/calculate_duration_and_ytm.ipynb",
+      "bytes": 5192,
+      "sha256": "662a0e1c62ac2d9430a72aaa8a1c7c5934fb8f1b43b10984222fbb4c26724dbb"
+    },
+    {
+      "path": "run_multiple_dates.ipynb",
+      "bytes": 80827,
+      "sha256": "40539c141ae0cbe6ddb671ba31ca52646ab39b4a1f473d8e60856ea6fcdd166e"
+    },
+    {
+      "path": "source/get_and_select_raw_data.py",
+      "bytes": 7888,
+      "sha256": "2ff629404caf3764c0177195b136e4bba52fa8c127602841b856853bfda99f32"
+    },
+    {
+      "path": "source/get_duration_and_ytm.py",
+      "bytes": 2423,
+      "sha256": "737730b2dcc71e854cacce1c021cd94b1dcdb5aaafb87f8b3b25f9745a6631b2"
+    },
+    {
+      "path": "source/get_g_and_riskfree.py",
+      "bytes": 610,
+      "sha256": "7969be1bff80cd1267309dfc5e141bae22cc9327ccc4750b5ab9a86d3cf2956d"
+    },
+    {
+      "path": "source/get_input_price_and_cashflow.py",
+      "bytes": 11368,
+      "sha256": "b06b196551fee518f99548eb916a311fcb1f9cbc9a62208cf1c019d9f60244bd"
+    },
+    {
+      "path": "source/kernel.py",
+      "bytes": 5140,
+      "sha256": "7e0a84430a119b26d91be979c075a927540ff1f898b38ced2814acb4cc838f3a"
+    },
+    {
+      "path": "source/models.py",
+      "bytes": 8421,
+      "sha256": "19447e992d8759665648262eef74a81059c6bb28cb595554f38f4c7c68241d05"
+    },
+    {
+      "path": "source/ret_curve_estimation.py",
+      "bytes": 7732,
+      "sha256": "ce71c7c22d47b140ecfa45c8b8ec06a8b41339b11766af03002795af0e878923"
+    },
+    {
+      "path": "source/run_ret_daily.sh",
+      "bytes": 242,
+      "sha256": "527d76ba19e9c5de7cdca79392c916e5c2041bcc47bc96a08e6256b1399dd9fb"
+    },
+    {
+      "path": "source/utils.py",
+      "bytes": 2706,
+      "sha256": "ea5c996ba2f99a836b2dd391124c6a3716a0569f92907effa384df91a2d0bc2a"
+    }
+  ]
+}

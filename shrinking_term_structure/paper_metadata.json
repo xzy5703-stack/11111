@@ -1,0 +1,28 @@
+{
+  "title": "Shrinking the Term Structure",
+  "authors": [
+    "Damir Filipović",
+    "Markus Pelger",
+    "Ye Ye"
+  ],
+  "journal": "Review of Finance",
+  "publication_date": "2026-08-21",
+  "accepted_date": "2026-07-06",
+  "doi": "10.1093/rof/rfag033",
+  "paper_url": "https://academic.oup.com/rof/advance-article/doi/10.1093/rof/rfag033/8767770",
+  "author_code_page": "https://mpelger.people.stanford.edu/data-and-code",
+  "repository": "https://github.com/rosieiiiii/KR_return_example",
+  "commit": "7cbfa4635c8461995ff9bcea74fff2818fe4618f",
+  "first_preprint_date": "2022-08-04",
+  "scope": "Reproduce the unmodified author executable core example on two bundled real Treasury cross sections (1986-06-30 and2013-12-31), full KR and KR-1 through KR-10. Add independent numerical and exact cross-sectional LOOCV verification.",
+  "limitations": [
+    "Not a reproduction of all full-paper daily1961-2020 tables or investment performance.",
+    "Full Treasury prices/cash-flow history requires WRDS/CRSP access per repository README.",
+    "The two-date sample cannot verify recession or time-series risk premia claims."
+  ],
+  "formula_checks": {
+    "kernel": "Published Appendix A.1 reproducing kernel agrees with generate_kernel_matrix(alpha=.05,delta=0).",
+    "ridge": "Equations7,A.8 produce K Z-transpose (Z K Z-transpose+penalty I)^(-1) rx; author penalty=(number of bonds)*lambda_unscaled/max_nonzero_cashflow_day.",
+    "parameters": "Published Section3.2 alpha=.05 lambda=10. Footnote16 scales smoothing penalty by1/3650; author executable cell useslambda10 (markdownmentionslambda1)."
+  }
+}
