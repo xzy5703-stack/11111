@@ -1,0 +1,32 @@
+name: Reproduce and verify core experiments
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      MPLBACKEND: Agg
+      OPENBLAS_NUM_THREADS: "2"
+      OMP_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+          cache: pip
+      - name: Install locked dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Download and verify pinned author sources
+        run: python setup_sources.py
+      - name: Execute notebook in a fresh kernel
+        run: python run_notebook.py
+      - name: Independently validate numerical outputs
+        run: python validate_replication.py --notebook three_finance_papers.ipynb
