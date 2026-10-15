@@ -1,0 +1,77 @@
+{
+  "repo": "https://github.com/yye9701/KR_example",
+  "commit": "0e13390c2b5a663545170fad5072b7b423d3793a",
+  "archive_url": "https://codeload.github.com/yye9701/KR_example/zip/0e13390c2b5a663545170fad5072b7b423d3793a",
+  "files": [
+    {
+      "path": "original/author/KR_example.ipynb",
+      "size_bytes": 410018,
+      "sha256": "51d29ed265fe6c012e1aa6959efeba034d6579ec636d5159375cfb6572aee724"
+    },
+    {
+      "path": "original/author/README.md",
+      "size_bytes": 3108,
+      "sha256": "850aa16aa6f1db459ce32acfc8a64a3cc297e9b841f2478a00a0f230b41d5c37"
+    },
+    {
+      "path": "original/author/construct_input_price_and_cashflow.ipynb",
+      "size_bytes": 11630,
+      "sha256": "db677af681c2921492864d046f68060ff236bb2dd75ade305d5a4a27e3558d4b"
+    },
+    {
+      "path": "original/author/example_data/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "path": "original/author/example_data/cashflow_1961-06-30.npz",
+      "size_bytes": 1432,
+      "sha256": "64935ffc14267e94f043e90dfdf9b08b2e0f274ffeb87a730d6fbc1dab837282"
+    },
+    {
+      "path": "original/author/example_data/cashflow_2013-12-31.npz",
+      "size_bytes": 3925,
+      "sha256": "6f6be1ddc1993479d0be86669644e8d55fc5e4636f5690d6d141363d2bd9f222"
+    },
+    {
+      "path": "original/author/example_data/price_1961-06-30.npy",
+      "size_bytes": 528,
+      "sha256": "3254c7d194898260850e9602cef2f2f2887dc36e24e451bf94496e0f371cad89"
+    },
+    {
+      "path": "original/author/example_data/price_2013-12-31.npy",
+      "size_bytes": 2368,
+      "sha256": "b431d414d98aa223b05c671cd4a23c50919e8a6429ce57fc8ff8c970560cef1d"
+    },
+    {
+      "path": "original/author/get_and_select_raw_data.ipynb",
+      "size_bytes": 30818,
+      "sha256": "45c56778c65f5a3f5ad7c9531cb4276879f6757e0f0dd18c678ba1f350cf7b49"
+    },
+    {
+      "path": "original/author/run_KR_multiple_dates.ipynb",
+      "size_bytes": 260757,
+      "sha256": "f84a92c3ebd2d6080ee1a2a0ae4eb141894498e69038a8f668289d962e1bc126"
+    },
+    {
+      "path": "original/author/src/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "path": "original/author/src/kr_model.py",
+      "size_bytes": 3454,
+      "sha256": "f8fe6ce9215344e20cbf1e98634817c81c4811275b76ef39662440e2394bc5cd"
+    },
+    {
+      "path": "original/author/src/kr_utils.py",
+      "size_bytes": 1037,
+      "sha256": "3f2eedd4f99cb4a6de5d4bdc53b377906f61ea7b4efef829f1c5505f55cd5f5d"
+    },
+    {
+      "path": "original/author_repository.zip",
+      "size_bytes": 514349,
+      "sha256": "1f21b87d0d126f93def803eadc77ea3b8fe25e25dc1ba0639ea922821a6dc109"
+    }
+  ]
+}

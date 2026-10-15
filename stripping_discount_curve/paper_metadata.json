@@ -1,0 +1,17 @@
+{
+  "title": "Stripping the Discount Curve \u2014 a Robust Machine Learning Approach",
+  "authors": [
+    "Damir Filipovic",
+    "Markus Pelger",
+    "Ye Ye"
+  ],
+  "publication_date": "2025-12-22",
+  "journal_issue": "Management Science 72(9), September 2026, 8057-8120",
+  "first_draft": "2022-03-15",
+  "paper_url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.01401",
+  "scope": "Exact original KR_example.ipynb estimator/settings on two bundled real U.S. Treasury dates; supplementary ridge sensitivity and numerical validation.",
+  "limitations": "This is a two-date core-method replication, not the full historical empirical study, benchmark tables, or confidence intervals. Full raw Treasury panel requires WRDS/CRSP access. Journal-version figure numbering was not verified.",
+  "formula_source_version": "Author March 10, 2023 draft hosted by Yale",
+  "formula_source_url": "https://economics.yale.edu/sites/default/files/2023-03/Pelger.pdf",
+  "paper_mapping": "2023 draft Theorem 2, Eqs (10)-(11) closed-form KR, Eq (14) kernel, Eq (17) duration weights; two of three dates in Appendix Figure A.5(a) ridge sensitivity and Figure A.9 observed/fitted YTM. Figure panels and grids are partial, not complete reproductions."
+}
